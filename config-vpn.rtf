@@ -1,69 +1,48 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2709
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;}
-{\colortbl;\red255\green255\blue255;\red220\green161\blue13;}
-{\*\expandedcolortbl;;\cssrgb\c89412\c68627\c3922;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww26700\viewh11720\viewkind0
-\deftab560
-\pard\pardeftab560\partightenfactor0
+Creating a VPN for securefield.com
 
-\f0\b\fs40 \cf0 Creating a VPN for {\field{\*\fldinst{HYPERLINK "http://securefield.com"}}{\fldrslt \cf2 securefield.com}}\
-\
-steps to create a VPN \
-\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
+steps to create a VPN 
 
-\f1\b0\fs26 \cf0 \
-\pard\pardeftab560\slleading20\partightenfactor0
-\cf0 \'97> Step 1\
-Launch an Ubuntu EC2 instance of t2.medium of 16GB in the desired region.\
-\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
-\cf0 \
-\pard\pardeftab560\slleading20\partightenfactor0
-\cf0 \'97> Step2\
-Add the following port in the security group along with 22 and 80\
-   \'97> custom udp 500\
-   \'97> custom udp 4500\
-\
-\'97> Step 3\
-Create a Elastic Ip and associate it with the instance and associate it with the instance in the same region\
-In my case it is 
-\f0\b 44.222.59.131\
+—> Step 1
+Launch an Ubuntu EC2 instance of t2.medium of 16GB in the desired region.
 
-\f1\b0 \
-\'97> Step 4 \
-Log in to instance and update using \
-apt-get update && apt-get dist-upgrade command\
-\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
-\cf0 \
-\pard\pardeftab560\slleading20\partightenfactor0
-\cf0 \'97> Step 5\
-Use this link for any assistance\
-    {\field{\*\fldinst{HYPERLINK "https://github.com/hwdsl2/setup-ipsec-vpn"}}{\fldrslt \cf2 https://github.com/hwdsl2/setup-ipsec-vpn}}\
-\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
-\cf0 \
-\pard\pardeftab560\slleading20\partightenfactor0
-\cf0 \'97> Step 6\
-Wget this command for getting and stepping vpn\
-   wget https://get.vpnsetup.net -O vpn.sh && sudo sh vpn.sh\
-\
-This type of info will be displayed\
-     ================================================\
-\pard\pardeftab560\slleading20\pardirnatural\partightenfactor0
-\cf0 \
-IPsec VPN server is now ready for use!\
-\
-Connect to your new VPN with these details:\
-\
-Server IP: 44.222.59.131\
-IPsec PSK: cpcaVxLiz8ddeENasdsad\
-Username: vpnuser\
-Password: vxPHeNMpmJFzasdasdw\
-\
-Write these down. You'll need them to connect!\
-\
-VPN client setup: https://vpnsetup.net/clients\
-\
-================================================\
-\
-\pard\pardeftab560\slleading20\partightenfactor0
-\cf0 \'97> Step 7\
-Check in you system in vpn config L2Tp\'85}
+—> Step2
+Add the following port in the security group along with 22 and 80
+   —> custom udp 500
+   —> custom udp 4500
+
+—> Step 3
+Create a Elastic Ip and  associate it with the instance in the same region
+In my case it is 44.222.58.156
+
+—> Step 4 
+Log in to instance and update using 
+apt-get update && apt-get dist-upgrade command
+
+—> Step 5
+Use this link for any assistance
+    https://github.com/hwdsl2/setup-ipsec-vpn
+
+—> Step 6
+Wget this command for getting and stepping vpn
+   wget https://get.vpnsetup.net -O vpn.sh && sudo sh vpn.sh
+
+This type of info will be displayed
+================================================
+
+IPsec VPN server is now ready for use!
+
+Connect to your new VPN with these details:
+
+Server IP: 44.222.59.131
+IPsec PSK: cpcaVxLiz8ddeENasdsad
+Username: vpnuser
+Password: vxPHeNMpmJFzasdasdw
+
+Write these down. You'll need them to connect!
+
+VPN client setup: https://vpnsetup.net/clients
+
+================================================
+
+—> Step 7
+Check in you system in vpn config L2Tp…
